@@ -33,11 +33,13 @@ if __name__ == "__main__":
     # Parse arguments
     parser = argparse.ArgumentParser(
         description="Denoise a sequence with FastDVDnet")
-    parser.add_argument("--noise_sigma", type=str,
+    parser.add_argument("--noise_sigma", type=int,
                         help='value of noise sigma')
-    parser.add_argument("--num_file", type=str,
+    parser.add_argument("--num_file", type=int,
                         help='number of file to concat')
 
     argspar = parser.parse_args()
 
-    concat_func(argspar.noise_sigma, argparse.num_file)
+    # print(argspar.noise_sigma, argspar.num_file)
+
+    concat_func(argspar.noise_sigma, argspar.num_file)
