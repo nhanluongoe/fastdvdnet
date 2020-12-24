@@ -102,12 +102,12 @@ def test_fastdvdnet(**args):
         seq_time = time.time()
 
         # Add noise
-        noise = torch.empty_like(seq).normal_(
-            mean=0, std=args['noise_sigma']).to(device)
-        seqn = seq + noise
+        # noise = torch.empty_like(seq).normal_(
+        #     mean=0, std=args['noise_sigma']).to(device)
+        # seqn = seq + noise
         noisestd = torch.FloatTensor([args['noise_sigma']]).to(device)
 
-        denframes = denoise_seq_fastdvdnet(seq=seqn,
+        denframes = denoise_seq_fastdvdnet(seq=seq,
                                            noise_std=noisestd,
                                            temp_psz=NUM_IN_FR_EXT,
                                            model_temporal=model_temp)
@@ -123,7 +123,7 @@ def test_fastdvdnet(**args):
     logger.info("\tDenoised {} frames in {:.3f}s, loaded seq in {:.3f}s".
                 format(seq_length, runtime, loadtime))
     logger.info(
-        "\tPSNR noisy {:.4f}dB, PSNR result {:.4f}dB".format(psnr_noisy, psnr))
+        "\tPSNR result {:.4f}dB".format(psnr))
 
     # Save outputs
     if not args['dont_save_results']:
