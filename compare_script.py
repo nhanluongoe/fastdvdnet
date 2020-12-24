@@ -2,11 +2,11 @@ import cv2
 import os
 
 # load images into a list and sort the list (so it will be concatinated according to the )
-before = sorted(os.listdir(os.path.join('content', 'drive',
-                                        'MyDrive', 'demo', 'middle', 'input_frames/')))
+before = sorted(os.listdir(os.path.join('/content', 'drive',
+                                        'MyDrive', 'demo', 'middle', 'input_frames')))
 print(len(before))
-after = sorted(os.listdir(os.path.join('content', 'drive',
-                                       'MyDrive', 'demo', 'middle', 'output_frames/')))
+after = sorted(os.listdir(os.path.join('/content', 'drive',
+                                       'MyDrive', 'demo', 'middle', 'output_frames')))
 print(len(after))
 
 # loop through 1986 frames
