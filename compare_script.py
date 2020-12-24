@@ -4,9 +4,6 @@ import argparse
 
 
 def concat_func(ns, num_file):
-    ns = int(ns)
-    num_file = int(num_file)
-
     # load images into a list and sort the list (so it will be concatinated according to the )
     before = sorted(os.listdir(os.path.join('/content', 'drive',
                                             'MyDrive', 'demo', 'middle', 'input_frames')))
@@ -43,4 +40,4 @@ if __name__ == "__main__":
 
     argspar = parser.parse_args()
 
-    concat_func(**vars(argspar))
+    concat_func(argspar.noise_sigma, argparse.num_file)
