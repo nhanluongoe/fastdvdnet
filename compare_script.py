@@ -6,7 +6,7 @@ before = sorted(os.listdir(os.path.join('/content', 'drive',
                                         'MyDrive', 'demo', 'middle', 'input_frames')))
 print(before)
 after = sorted(os.listdir(os.path.join('/content', 'drive',
-                                       'MyDrive', 'demo', 'middle', 'output_frames')), key=lambda item: int(item.split('_')[-1]))
+                                       'MyDrive', 'demo', 'middle', 'output_frames')), key=lambda item: int(item.split('_')[-1].split('.')[0]))
 print(after)
 
 # loop through 1986 frames
