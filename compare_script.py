@@ -70,4 +70,4 @@ if __name__ == "__main__":
 
     # print(argspar.noise_sigma, argspar.num_file)
 
-    concat_func(argspar.noise_sigma, argspar.num_file, argparse.before)
+    concat_func(argspar.noise_sigma, argspar.num_file, argspar.before)
